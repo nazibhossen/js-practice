@@ -3,8 +3,8 @@ const second = [4, 5, 6]
 
 const combine = first.concat.second //this can only concatenate two existing array 
 //But ->
-const spread = [...first,...second]
+const spread = [...first, ...second]
 //In this spread mathod we can concatenate 2 existing value and add more value. Like
-const spread2 = ['a',...first,'b',...second,'c']
+const spread2 = ['a', ...first, 'b', ...second, 'c']
 
-console.log(spread2)
+console.log(spread2);
