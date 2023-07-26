@@ -1,21 +1,26 @@
-class Person {
-    constructor(name) {
+class Player {
+    constructor(name, age) {
         this.name = name;
+        this.age = age;
     }
-    walk() {
-        console.log('walk');
-    }
-}
-
-class Teacher extends Person {
-    constructor(name, degree) {
-        super(name);
-        this.degree = degree;
-    }
-    teach() {
-        console.log('teach')
+    getPlayerDetails () {
+        return `${this.name} is ${this.age} years old`;
     }
 }
 
-const teacher = new Teacher('Munna','MSc')
-console.log(teacher)
+class Footballer extends Player {
+    constructor(name, age, noOfGoals) {
+        super(name, age);
+        this.noOfGoals = noOfGoals;
+    }
+}
+
+class Cricketer extends Player {
+    constructor(name, age, centuries){
+        super(name, age);
+        this.centuries = centuries;
+    }
+}
+
+const player = new Footballer('Messi', 35, 400);
+console.log(player.getPlayerDetails())
